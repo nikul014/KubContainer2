@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubernetes-service1
+spec:
+  selector:
+    app: kubernetes-deployment1
+  ports:
+    - name: microservice-port
+      protocol: TCP
+      port: 80
+      targetPort: 6000
+    - name: microservice-port2
+      protocol: TCP
+      port: 6002
+      targetPort: 6002
+  type: LoadBalancer
