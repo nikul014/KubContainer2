@@ -1,19 +1,19 @@
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
-  name: "kubernetes-deployment"
+  name: "kubernetes-deployment1"
   namespace: "default"
   labels:
-    app: "kubernetes-deployment"
+    app: "kubernetes-deployment1"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: "kubernetes-deployment"
+      app: "kubernetes-deployment1"
   template:
     metadata:
       labels:
-        app: "kubernetes-deployment"
+        app: "kubernetes-deployment1"
     spec:
       containers:
       - name: "container2"
@@ -30,14 +30,14 @@ spec:
 apiVersion: "autoscaling/v2"
 kind: "HorizontalPodAutoscaler"
 metadata:
-  name: "kubernetes-deployment-hpa-y3nx"
+  name: "kubernetes-deployment1-hpa-y3nx"
   namespace: "default"
   labels:
-    app: "kubernetes-deployment"
+    app: "kubernetes-deployment1"
 spec:
   scaleTargetRef:
     kind: "Deployment"
-    name: "kubernetes-deployment"
+    name: "kubernetes-deployment1"
     apiVersion: "apps/v1"
   minReplicas: 1
   maxReplicas: 5
