@@ -4,8 +4,12 @@ metadata:
   name: kubernetes-service1
 spec:
   selector:
-    app: kubernetes-deployment1
+    app: kubernetes-deployment
   ports:
+    - name: microservice-port
+      protocol: TCP
+      port: 80
+      targetPort: 6000
     - name: microservice-port2
       protocol: TCP
       port: 6001
