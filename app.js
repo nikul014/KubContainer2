@@ -49,7 +49,7 @@ app.post('/calculate', (req, res) => {
 
             res.json({ file, sum });
         } catch (error) {
-            res.status(400).json({ file, error: "Input file not in CSV format." });
+            res.status(200).json({ file, error: "Input file not in CSV format." });
         }
     });
 });
