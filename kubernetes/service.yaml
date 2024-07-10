@@ -9,5 +9,5 @@ spec:
     - name: microservice-port2
       protocol: TCP
       port: 80
-      targetPort: 6001
+      targetPort: 8000
   type: LoadBalancer

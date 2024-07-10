@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 
-const PORT = process.env.PORT || 6001;
+const PORT = process.env.PORT || 8000;
 const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
 
 app.use(bodyParser.json());
