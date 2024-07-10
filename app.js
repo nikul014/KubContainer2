@@ -36,7 +36,8 @@ app.post('/calculate', (req, res) => {
             const amountIndex = header.indexOf('amount');
 
             if (productIndex === -1 || amountIndex === -1) {
-                throw new Error("Input file not in CSV format.");
+                res.status(200).json({ file, error: "Input file not in CSV format." });
+                return;
             }
 
             const sum = lines.slice(1).reduce((total, line) => {
