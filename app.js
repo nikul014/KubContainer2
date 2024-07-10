@@ -36,7 +36,7 @@ app.post('/calculate', (req, res) => {
             const amountIndex = header.indexOf('amount');
 
             if (productIndex === -1 || amountIndex === -1) {
-                res.status(200).json({ file, error: "Input file not in CSV format." });
+                res.status(400).json({ file, error: "Input file not in CSV format." });
                 return;
             }
 
@@ -50,7 +50,7 @@ app.post('/calculate', (req, res) => {
 
             res.json({ file, sum });
         } catch (error) {
-            res.status(200).json({ file, error: "Input file not in CSV format." });
+            res.status(400).json({ file, error: "Input file not in CSV format." });
         }
     });
 });
