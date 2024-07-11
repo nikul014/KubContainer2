@@ -10,7 +10,7 @@ const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
 
 app.use(bodyParser.json());
 
-// Calculate API for container 2
+// Calculate API for container 2 image
 app.post('/calculate', (req, res) => {
     const { file, product } = req.body;
 
